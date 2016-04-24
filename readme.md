@@ -1,7 +1,12 @@
-#### MusicMute 1.1.1
+#### MusicMute Continued
+
+A simple mod for Kerbal Space Program that toggles the game's music with a hotkey. The default is F8.
+
+---
+
 #### An addon for Kerbal Space Program 1.1
 
-Copyright (C) 2015  Nimo Beeren
+Copyright (C) 2015 Nimo Beeren
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
