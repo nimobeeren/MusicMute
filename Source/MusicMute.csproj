@@ -7,8 +7,8 @@
     <ProjectGuid>{B10D9410-FE4B-4E90-AB43-6C954307B235}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MusicMute</RootNamespace>
-    <AssemblyName>MusicMute</AssemblyName>
+    <RootNamespace>MusicMuteContinued</RootNamespace>
+    <AssemblyName>MusicMuteContinued</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -70,9 +70,7 @@
     <ItemGroup>
       <GameData Include="$(SolutionDir)..\GameData\**\*" />
     </ItemGroup>
-    <Copy SourceFiles="@(GameData)" DestinationFolder="$(SolutionDir)build\GameData\%(RecursiveDir)" />
-    <Copy SourceFiles="@(PluginOutput)" DestinationFolder="$(SolutionDir)build\GameData\Plugins" />
     <MakeDir Directories="$(SolutionDir)bin\dist" />
-    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressPath="$(SolutionDir)build\GameData" ZipFileName="$(SolutionDir)bin\dist\MusicMuteContinued.zip" />
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressPath="$(SolutionDir)build\MusicMuteContinued" ZipFileName="$(SolutionDir)bin\dist\MusicMuteContinued.zip" />
   </Target>
 </Project>

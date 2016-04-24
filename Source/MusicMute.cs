@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace MusicMute
+namespace MusicMuteContinued
 {
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
     public class MusicMute : MonoBehaviour
