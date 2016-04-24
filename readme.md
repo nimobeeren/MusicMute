@@ -2,6 +2,8 @@
 
 A simple mod for Kerbal Space Program that toggles the game's music with a hotkey. The default is F8.
 
+Originally by Nimo Beeren, recompiled here for 1.1+.
+
 ---
 
 #### An addon for Kerbal Space Program 1.1
