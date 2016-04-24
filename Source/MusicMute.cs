@@ -51,7 +51,7 @@ namespace MusicMuteContinued
         public void Start()
         {
             // Load the config file
-            var configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + "GameData/MusicMute/Config/Settings.cfg");
+            var configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + "GameData/MusicMuteContinued/Config/Settings.cfg");
 
             // Get the start muted preference from config file
             string cfgStartMuted = configFile.GetNode("MusicMute").GetValue("startMuted");
