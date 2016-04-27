@@ -1,4 +1,15 @@
-﻿using System;
+﻿/*                                                USEFUL DOCS AND INFO
+ * How to make a non-part plugin
+ * http://forum.kerbalspaceprogram.com/index.php?/topic/44517-how-to-make-a-non-part-plugin/    
+ * Nifty255's KSP Modding Tutorials, Volume 1                                                   
+ * https://www.youtube.com/playlist?list=PLTWjydcIcK7rao4jyt8UP-JxapS5e0781                     
+ * ConfigNode is now in KSPUtil -.-
+ * http://forum.kerbalspaceprogram.com/index.php?/topic/97541-11-fuel-tanks-plus-181-2016-04-24/&page=17#comment-2483032
+ * Documentation for GameEvents and how to hook into them
+ * https://anatid.github.io/XML-Documentation-for-the-KSP-API/class_game_events.html
+*/
+
+using System;
 using UnityEngine;
 
 namespace MusicMuteContinued
