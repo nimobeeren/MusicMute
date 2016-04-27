@@ -70,9 +70,9 @@
     <ItemGroup>
       <GameData Include="$(SolutionDir)..\GameData\**\*" />
     </ItemGroup>
-    <Copy SourceFiles="@(GameData)" DestinationFolder="$(SolutionDir)build\MusicMuteContinued\%(RecursiveDir)" />
-    <Copy SourceFiles="@(PluginOutput)" DestinationFolder="$(SolutionDir)build\MusicMuteContinued\Plugins" />
+    <Copy SourceFiles="@(GameData)" DestinationFolder="$(SolutionDir)build\MusicMute\%(RecursiveDir)" />
+    <Copy SourceFiles="@(PluginOutput)" DestinationFolder="$(SolutionDir)build\MusicMute\Plugins" />
     <MakeDir Directories="$(SolutionDir)bin\dist" />
-    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressPath="$(SolutionDir)build\MusicMuteContinued" ZipFileName="$(SolutionDir)bin\dist\MusicMuteContinued.zip" />
+    <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressPath="$(SolutionDir)build\MusicMute" ZipFileName="$(SolutionDir)bin\dist\MusicMute.zip" />
   </Target>
 </Project>
