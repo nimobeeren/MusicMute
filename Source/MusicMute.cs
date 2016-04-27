@@ -33,14 +33,14 @@ namespace MusicMuteContinued
 
                     // Mute the music
                     MusicLogic.SetVolume(0f);
-                    print("[MusicMute]: Muted music");
+                    print("[MusicMute] Muted music");
                 }
                 // Unmute
                 else
                 {
                     // Set the music volume to what it was before
                     MusicLogic.SetVolume(oldVolume);
-                    print("[MusicMute]: Set music volume to: " + oldVolume);
+                    print("[MusicMute] Set music volume to: " + oldVolume);
                 }
 
                 muted = value;
@@ -57,7 +57,7 @@ namespace MusicMuteContinued
             string cfgStartMuted = configFile.GetNode("MusicMute").GetValue("startMuted");
             if (!bool.TryParse(cfgStartMuted, out startMuted))
             {
-                print("[MusicMute]: Could not parse startMuted value. Please use true or false as the value in the config file.");
+                print("[MusicMute] Could not parse startMuted value. Please use true or false as the value in the config file.");
             }
 
             // Get the user-specified toggle key
@@ -72,12 +72,12 @@ namespace MusicMuteContinued
                 }
                 catch
                 {
-                    print("[MusicMute]: Could not parse toggle key from config file. Probably misspelled your key. Using the default F8.");
+                    print("[MusicMute] Could not parse toggle key from config file. Probably misspelled your key. Using the default F8.");
                 }
             }
             else
             {
-                print("[MusicMute]: Could not find toggle key in config file. Using the default F8.");
+                print("[MusicMute] Could not find toggle key in config file. Using the default F8.");
             }
 
             // Get the user-specified modifier key
@@ -92,12 +92,12 @@ namespace MusicMuteContinued
                 }
                 catch
                 {
-                    print("[MusicMute]: Could not parse modifier key from config file. You probably misspelled your key.");
+                    print("[MusicMute] Could not parse modifier key from config file. You probably misspelled your key.");
                 }
             }
             else
             {
-                print("[MusicMute]: Could not find modifier key in config file.");
+                print("[MusicMute] Could not find modifier key in config file.");
             }
 
             // Mute very fastttttttt if the user desires
