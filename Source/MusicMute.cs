@@ -61,6 +61,10 @@ namespace MusicMute
         // Runs on succesful load
         public void Start()
         {
+            // Hook into the game scene switch events
+            GameEvents.onGameSceneSwitchRequested.Add(this.onGameSceneSwitchRequested);
+            GameEvents.onLevelWasLoaded.Add(this.onLevelWasLoaded);
+
             // Load the config file
             var configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + "GameData/MusicMute/Config/Settings.cfg");
 
@@ -133,6 +137,39 @@ namespace MusicMute
                     // Toggle the muted state
                     Muted = !Muted;
                 }
+            }
+        }
+
+        // Runs on exit
+        public void OnDestroy()
+        {
+            // Unhook from the scene switch events
+            GameEvents.onGameSceneSwitchRequested.Remove(this.onGameSceneSwitchRequested);
+            GameEvents.onLevelWasLoaded.Remove(this.onLevelWasLoaded);
+        }
+
+        // Sets the music volume to 0
+        public void VerifyMuted()
+        {
+            MusicLogic.SetVolume(0f);
+        }
+
+        // Runs when scene switch is requested
+        private void onGameSceneSwitchRequested(GameEvents.FromToAction<GameScenes, GameScenes> action)
+        {
+            // The game likes to play music when we switch scenes, so we have to tell it to shut up once more
+            if (Muted)
+            {
+                VerifyMuted();
+            }
+        }
+
+        // Runs when scene is done switching
+        private void onLevelWasLoaded(GameScenes action)
+        {
+            if (Muted)
+            {
+                VerifyMuted();
             }
         }
     }
