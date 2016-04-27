@@ -7,8 +7,8 @@
     <ProjectGuid>{B10D9410-FE4B-4E90-AB43-6C954307B235}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MusicMuteContinued</RootNamespace>
-    <AssemblyName>MusicMuteContinued</AssemblyName>
+    <RootNamespace>MusicMute</RootNamespace>
+    <AssemblyName>MusicMute</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
