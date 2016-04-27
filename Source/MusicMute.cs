@@ -12,7 +12,7 @@
 using System;
 using UnityEngine;
 
-namespace MusicMuteContinued
+namespace MusicMute
 {
     [KSPAddon(KSPAddon.Startup.MainMenu, true)]
     public class MusicMute : MonoBehaviour
@@ -62,7 +62,7 @@ namespace MusicMuteContinued
         public void Start()
         {
             // Load the config file
-            var configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + "GameData/MusicMuteContinued/Config/Settings.cfg");
+            var configFile = ConfigNode.Load(KSPUtil.ApplicationRootPath + "GameData/MusicMute/Config/Settings.cfg");
 
             // Get the start muted preference from config file
             string cfgStartMuted = configFile.GetNode("MusicMute").GetValue("startMuted");
