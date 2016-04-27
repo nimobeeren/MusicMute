@@ -22,7 +22,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #### Usage
-By default, you can mute music in-game at any time by pressing F8. This key can be configured by editing the Settings.cfg file found in `GameData\MusicMute\Config`.
+By default, you can mute music in-game at any time by pressing F8. This key can be configured by editing the `Settings.cfg` file found in `GameData\MusicMute\Config`.
 You can change the toggle key, as well as configure a modifier key that has to be pressed at the same time, like `LeftAlt`, `LeftControl` or whatever you want.
 
 For the full list of keys you can use, see [Unity Script Reference](http://docs.unity3d.com/ScriptReference/KeyCode.html).
@@ -30,11 +30,11 @@ For the full list of keys you can use, see [Unity Script Reference](http://docs.
 You can also choose wether you want to start the game with muted music or not. Set the value of `startMuted` to either `true` or `false` to use this feature.
 
 #### Installation
-You can easily install this addon by unzipping the contents of the supplied GameData folder into the GameData folder that is inside your KSP installation directory.
-This is usually "C:\Program Files (x86)\Steam\SteamApps\common\Kerbal Space Program\GameData".
+You can easily install this addon by unzipping the contents of the supplied GameData folder into the `GameData` folder that is inside your KSP installation directory.
+This is usually `C:\Program Files (x86)\Steam\SteamApps\common\Kerbal Space Program\GameData`.
 
 #### Source code
-You'll find the source code of this addon in the "Source" folder.
+You'll find the source code of this addon in the `Source` folder.
 
 #### Changelog
 1.00 - 5.5.2015
