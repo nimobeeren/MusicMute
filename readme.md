@@ -4,7 +4,7 @@ A simple mod for Kerbal Space Program that toggles the game's music with a hotke
 
 ---
 
-#### An addon for Kerbal Space Program 1.1+
+#### An addon for Kerbal Space Program 1.2+
 
 Copyright (C) 2016 Nimo Beeren
 
@@ -53,3 +53,6 @@ You'll find the source code of this addon in the `Source` folder.
  * Fixed bug where changing scene would turn the music on again
  * Slightly changed log output format
  * Added useful docs and info in source
+
+1.1.3 - 15-10-2016
+ * Recompiled aginst KSP 1.2
