@@ -31,25 +31,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\Assembly-CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="KSPUtil">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\KSPUtil.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\KSP_x64_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="MusicMute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\..\..\Games\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\..\..\..\..\Games\Steam\steamapps\common\Kerbal Space Program\KSP_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MSBuild.Extension.Pack.1.8.0\build\net35\MSBuild.Extension.Pack.targets" Condition="Exists('packages\MSBuild.Extension.Pack.1.8.0\build\net35\MSBuild.Extension.Pack.targets')" />
@@ -72,8 +63,8 @@
     </ItemGroup>
     <Copy SourceFiles="@(GameData)" DestinationFolder="$(SolutionDir)build\MusicMute\GameData\MusicMute\%(RecursiveDir)" />
     <Copy SourceFiles="@(PluginOutput)" DestinationFolder="$(SolutionDir)build\MusicMute\GameData\MusicMute\Plugins" />
-	<Copy SourceFiles="$(SolutionDir)..\readme.md" DestinationFolder="$(SolutionDir)build\MusicMute" />
-	<Copy SourceFiles="$(SolutionDir)..\COPYING" DestinationFolder="$(SolutionDir)build\MusicMute" />
+    <Copy SourceFiles="$(SolutionDir)..\readme.md" DestinationFolder="$(SolutionDir)build\MusicMute" />
+    <Copy SourceFiles="$(SolutionDir)..\COPYING" DestinationFolder="$(SolutionDir)build\MusicMute" />
     <MakeDir Directories="$(SolutionDir)bin\dist" />
     <MSBuild.ExtensionPack.Compression.Zip TaskAction="Create" CompressPath="$(SolutionDir)build\MusicMute" ZipFileName="$(SolutionDir)bin\dist\MusicMute.zip" />
   </Target>
